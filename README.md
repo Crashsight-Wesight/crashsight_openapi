@@ -4,8 +4,8 @@ Crashsight OpenAPI 为崩溃/异常检测、报告、分析和解决方案提供
 
 ## 调用环境
 
-- **国内**: `https://crashsight.qq.com`
-- **新加坡**: `https://crashsight.wetest.net`
+- **国内**: https://crashsight.qq.com
+- **新加坡**: https://crashsight.wetest.net
 
 ## 接口使用说明
 #### 部分接口需要做平台区分
