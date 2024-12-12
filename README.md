@@ -4,13 +4,11 @@ CrashSight provides exception capture, reporting and analysis services, assistin
 
 CrashSight supports all platforms (mobile/PC/consoles/WeChat applet) and provides professional services including crash/exception detection, report, analysis, and solutions. It helps developers locate and address problem more efficiently to keep improving user experience of product.
 
-Local(China) Website: https://crashsight.qq.com
 
-International Website: https://crashsight.wetest.net
+Website: https://crashsight.wetest.net
 
-![alt text](image.png)
 
-Create a project by clicking the "Apply for New APP" button in the "My Product" page. If you need help, for internal project, please search "CrashSight" in Tencent WeCom, and for external projects, please consult email: crashsight@tencent.com.
+You can consult email: crashsight@tencent.com for help.
 
 ## Doc
 Product :

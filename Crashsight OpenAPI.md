@@ -24,9 +24,7 @@ generator: "@tarslib/widdershins v4.0.23"
 Need to access different sites based on user's registration region：
 
 
-China Website： https://crashsight.qq.com/uniform/
-
-Global Website： https://crashsight.wetest.net/uniform/
+Website： https://crashsight.wetest.net
 
 
 
@@ -90,9 +88,7 @@ POST /env/uniform/openapi/getTopIssueHourlysignature
 
 Hourly TOP issue list
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example：https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getTopIssueHourly.py
 
@@ -388,9 +384,7 @@ POST /env/uniform/openapi/getTrendEx
 
 Get trend data for the last N days
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example: https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getTrendEx.py
 
@@ -481,9 +475,7 @@ GET /env/uniform/openapi/getRealTimeAppendStatsignature
 
 To get the anomaly overview data for a single day, including crash, ANR and error
 
-China website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example: https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getRealTimeAppendStat.py
 
@@ -584,9 +576,7 @@ POST /env/uniform/openapi/getAppRealTimeTrendAppendsignature
 
 Get cumulative trend data
 
-China website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example: https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getAppRealTimeTrendAppend.py
 
@@ -869,9 +859,7 @@ POST /env/uniform/openapi/getRealTimeHourlyStatsignature
 
 Get hourly trend data
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getRealTimeHourlyStat.py
 
@@ -958,9 +946,7 @@ POST /env/uniform/openapi/getAppRealTimeTrendAppendExsignature
 
 Get cumulative trend data
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getAppRealTimeTrendAppendEx.py
 
@@ -1070,7 +1056,7 @@ POST /env/uniform/openapi/getTopIssueExsignature
 
 To get top issue list
 
-China Website： https://crashsight.qq.com
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getTopIssueEx.py
 
@@ -1274,9 +1260,7 @@ POST /env/uniform/openapi/getRealTimeHourlyStatExsignature
 
 Get hourly trend data
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getRealTimeHourlyStatEx.py
 
@@ -1378,9 +1362,7 @@ POST /env/uniform/openapi/queryAdvancedTrend
 
 Get advanced trends（Private test）
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 Download Python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_queryAdvancedTrend.py
 
@@ -1477,9 +1459,7 @@ POST /env/uniform/openapi/addTagsignature
 
 To set issue-level tags.
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 > Body Parameters
 
@@ -1546,7 +1526,7 @@ HTTP Status Code **200**
 
 POST /env/uniform/openapi/getStackDeviceInfo/platformId/platformId/signature
 
-China Website： https://crashsight.qq.com
+Website： https://crashsight.wetest.net
 
 > Body Parameters
 
@@ -1634,9 +1614,7 @@ HTTP Status Code **200**
 
 POST /env/uniform/openapi/getCrashUserList/platformId/platformId/signature
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getCrashUserList.py
 
@@ -2073,9 +2051,7 @@ HTTP Status Code **200**
 
 GET /env/uniform/openapi/noteListsignature
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_noteList.py
 
@@ -2146,9 +2122,7 @@ GET /env/uniform/openapi/issueInfosignature
 
 get issue details
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 ### Params
 
@@ -2250,9 +2224,7 @@ HTTP Status Code **200**
 
 GET /env/uniform/openapi/lastCrashInfosignature
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_lastCrashInfo.py
 
@@ -2351,9 +2323,7 @@ POST /env/uniform/openapi/crashListsignature
 
 To get a list of crash hashes based on an issue,
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 download python code example: https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_crashList.py
 
 > Body Parameters
@@ -2476,9 +2446,7 @@ GET /env/uniform/openapi/appDetailCrashsignature
 
 To get the trace data, trace logs, additional information, and custom key-value pairs
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 ### Params
 
@@ -2634,9 +2602,7 @@ HTTP Status Code **200**
 
 GET /env/uniform/openapi/crashDocsignature
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example: https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_crashDoc.py
 
@@ -2940,9 +2906,7 @@ POST /env/uniform/openapi/queryIssueListsignature
 
 Get Issue list
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_queryIssueList.py
 
@@ -3066,9 +3030,7 @@ GET /env/uniform/openapi/getSelectorDatassignature
 
 Get the list of versions, bundle, and handlers
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getSelectorDatas.py
 
@@ -3425,9 +3387,7 @@ POST /env/uniform/openapi/getCrashUserInfosignature
 
 Get the crash details based on OpenID
 
-China Website： https://crashsight.qq.com
-
-Overseas website： https://crashsight.wetest.net
+Website： https://crashsight.wetest.net
 
 download python code example:https://crashsight-docs-1258344700.cos.ap-shanghai.myqcloud.com/global/crashsight_openapi_v1_getCrashUserInfo.py
 
