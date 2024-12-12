@@ -22,11 +22,11 @@ class crashsightOpenApi(object):
         self.body = body
         self.localUserId = localUserId
 
-        # 获取当前时间戳
+        # To get the current timestamp
         self.t = int(time.time())
 
     """
-        获取签名计算值的方法
+        To calculate a signature value
     """
     def __get_api_signature(self):
         key_bytes = bytes(self.userOpenapiKey, 'utf-8')
@@ -42,7 +42,7 @@ class crashsightOpenApi(object):
         return hash_str_64
 
     """
-        获取相关的接口返回数据
+        To get the API response
     """
     def do_post_request(self):
         # print(self.request_url)
@@ -54,14 +54,14 @@ class crashsightOpenApi(object):
 
 if __name__ == "__main__":
 
-    # 请根据OPEN_API的文档说明，以及所在的运行环境正确填写app_id, localUserId, userOpenapiKey以及request_url
+    # Please follow the OpenAPI documentation and fill in the localUserId, userOpenapiKey, and request_url correctly based on the runtime environment.
 
     localUserId = 'xxx'
     userOpenapiKey = 'yyy'
 
-    #国内和海外地址不同，根据需求进行切换
+    #The domestic and overseas addresses are different; switch according to the requirements.
     request_url =  'https://crashsight.qq.com/uniform/openapi/upsertBugs'
-    #
+    #Request parameter example
     body = {"appId":"d98b9f7eec","platformId":1,"issueList":[{"issueHash":"7A5DD858AC3CF6CBD437DE7F3B6703F4","bugInfoList":[{"status":"new","title":"【CrashSight一键提单】java.lang.RuntimeException -  - 2023-08-25 14:45:39","description":"异常Issue ID: 7A5DD858AC3CF6CBD437DE7F3B6703F4\n<br><br>\n异常详情地址: <a href='https://crashsight.wetest.net/crash-reporting/crashes/d98b9f7eec/7A5DD858AC3CF6CBD437DE7F3B6703F4/7A5DD858AC3CF6CBD437DE7F3B6703F4/report-id/CDB2BFF4C44142FFA9A8DE47B5868CEC?pid=1'>https://crashsight.wetest.net/crash-reporting/crashes/d98b9f7eec/7A5DD858AC3CF6CBD437DE7F3B6703F4/7A5DD858AC3CF6CBD437DE7F3B6703F4/report-id/CDB2BFF4C44142FFA9A8DE47B5868CEC?pid=1</a>\n<br><br>\n最近上报时间: 2023-08-25 14:45:39 223\n<br><br>\n异常进程#线程: com.tencent.demo#Thread-221(221)\n<br><br>\n异常消息：sNSXTvFGp6ZGrorljP6WPxsGtKc5px\n<br><br>\n出错堆栈:\n<br><pre>irgMyesZayrR</pre>\n<br><br>\n发生时间: 2020-05-07 18:36:48<br>\n上报时间: 2023-08-25 14:45:39<br>\n应用包名: com.tencent.demo<br>\n应用版本: 1.0.3<br>\n设备机型: 魅族 M6<br>\n系统版本: Android 4.4.2,level 20<br>\n发生次数：763670<br>\n影响设备数：762282<br>\n","reporter":"anguswang","includeAttachments":false,"attachmentFilenameList":[],"severity":"serious","versionReport":"发现版本2","iterationId":"1020428185001284771","releaseId":"1020428185000072689","rawValueCurrentOwner":["v_fzqfang"],"currentOwner":"v_fzqfang"}]}]}
 
 

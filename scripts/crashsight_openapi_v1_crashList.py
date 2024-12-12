@@ -21,11 +21,11 @@ class crashsightOpenApi(object):
         self.app_key = app_key
         self.request_url = request_url
 
-        # 获取当前时间戳
+        # To get the current timestamp
         self.t = int(time.time())
 
     """
-        获取签名计算值的方法
+        To calculate a signature value
     """
     def __get_api_signature(self):
         key_bytes = bytes(self.app_id, 'utf-8')
@@ -41,7 +41,7 @@ class crashsightOpenApi(object):
         return hash_str_64
 
     """
-        获取相关的接口返回数据
+        To get the API response
     """
     def do_get_request(self):
         self.request_url += ('&appSecret={}&appId={}&t={}'.format(self.__get_api_signature(), self.app_id, str(self.t)))
@@ -52,11 +52,11 @@ class crashsightOpenApi(object):
 
 
 if __name__ == "__main__":
-    # 请根据OPEN_API的文档说明，以及所在的运行环境正确填写x_token, app_id, app_key以及request_url
-
-    x_token = 'XXX'
-    app_id = 'XXX'
-    app_key = 'XXX'
+    # Please follow the OpenAPI documentation and fill in the x_token, app_id, app_key and request_url correctly based on the runtime environment.
+    x_token = 'xxx'
+    app_id = 'xxx'
+    app_key = 'xxx'
+    #The domestic and overseas addresses are different; switch according to the requirements.
     request_url = 'https://crashsight.qq.com/uniform/openapi/crashList/crashDataType/undefined?start=0&searchType=detail&exceptionTypeList=Crash%2CNative%2CExtensionCrash&pid=1&platformId=1&issueId=650C2C6DF962E9D6ACE6BF5C9F27676D&rows=50&appId=3729de3c06&fsn=a59681f5-6848-479f-92a1-8f6602b62970'
     # print(request_url)
 

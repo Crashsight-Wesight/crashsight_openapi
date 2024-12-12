@@ -23,11 +23,11 @@ class crashsightOpenApi(object):
         self.body=body
         self.app_id = app_id
 
-        # 获取当前时间戳
+        # To get the current timestamp
         self.t = int(time.time())
 
     """
-        获取签名计算值的方法
+        To calculate a signature value
     """
     def __get_api_signature(self):
         key_bytes = bytes(self.app_id, 'utf-8')
@@ -43,7 +43,7 @@ class crashsightOpenApi(object):
         return hash_str_64
 
     """
-        获取相关的接口返回数据
+        To get the API response
     """
     def do_post_request(self):
         # print(self.request_url)

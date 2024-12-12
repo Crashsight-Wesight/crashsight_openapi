@@ -22,11 +22,11 @@ class crashsightOpenApi(object):
         self.body = body
         self.localUserId = localUserId
 
-        # 获取当前时间戳
+        # To get the current timestamp
         self.t = int(time.time())
 
     """
-        获取签名计算值的方法
+        To calculate a signature value
     """
     def __get_api_signature(self):
         key_bytes = bytes(self.userOpenapiKey, 'utf-8')
@@ -42,7 +42,7 @@ class crashsightOpenApi(object):
         return hash_str_64
 
     """
-        获取相关的接口返回数据
+        To get the API response
     """
     def do_post_request(self):
         # print(self.request_url)
@@ -53,15 +53,15 @@ class crashsightOpenApi(object):
 
 
 if __name__ == "__main__":
-    # 请根据OPEN_API的文档说明，以及所在的运行环境正确填写app_id, localUserId, userOpenapiKey以及request_url
+    # Please follow the OpenAPI documentation and fill in the localUserId, userOpenapiKey, and request_url correctly based on the runtime environment.
 
     localUserId = 'xxx'
     userOpenapiKey = 'xxx'
 
-    #国内和海外地址不同，根据需求进行切换
+    #The domestic and overseas addresses are different; switch according to the requirements.
     request_url =  'https://crashsight.qq.com/uniform/openapi/getRealTimeHourlyStatEx'
 
-    #
+    #Request parameter example
     body = {"appId":"3729de3c06","platformId":1,"type":"crash","vm":0,"dataType":"realTimeCompareData","mergeMultipleVersionsWithInaccurateResult":False,"version":"no_compare","startDate":"2023080200","endDate":"2023080223","needCountryDimension":False,"countryList":[]}
 
 

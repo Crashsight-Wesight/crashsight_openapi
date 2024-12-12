@@ -5,31 +5,32 @@ import base64
 import hmac
 import hashlib
 import urllib3
+import json
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class crashsightOpenApi(object):
-    def __init__(self, localUserId, userOpenapiKey, request_url):
+    def __init__(self,localUserId, userOpenapiKey, request_url, body):
         self.localUserId = localUserId
         self.headers = {
             'Content-Type': 'application/json',
-            'Accept-Encoding': '*'
+            'Accept-Encoding':'*'
         }
         self.userOpenapiKey = userOpenapiKey
         self.request_url = request_url
+        self.body = body
         self.localUserId = localUserId
 
-        # 获取当前时间戳
+        # To get the current timestamp
         self.t = int(time.time())
 
     """
-        获取签名计算值的方法
+        To calculate a signature value
     """
-
     def __get_api_signature(self):
         key_bytes = bytes(self.userOpenapiKey, 'utf-8')
-        message = self.localUserId + '_' + str(self.t)
+        message = self.localUserId + '_'+ str(self.t)
         message_bytes = bytes(message, 'utf-8')
         hash_str = hmac.new(key_bytes, message_bytes, digestmod=hashlib.sha256).hexdigest()
         # print(hash_str)
@@ -41,28 +42,29 @@ class crashsightOpenApi(object):
         return hash_str_64
 
     """
-        获取相关的接口返回数据
+        To get the API response
     """
-
     def do_post_request(self):
         # print(self.request_url)
-        self.request_url += (
-            '?userSecret={}&localUserId={}&t={}'.format(self.__get_api_signature(), self.localUserId, str(self.t)))
+        self.request_url += ('?userSecret={}&localUserId={}&t={}'.format(self.__get_api_signature(), self.localUserId, str(self.t)))
         print(self.request_url)
-        api_response = requests.post(self.request_url, data=json.dumps(self.body), headers=self.headers)
+        api_response = requests.post(self.request_url, data = json.dumps(self.body), headers = self.headers)
         return api_response
 
 
 if __name__ == "__main__":
+
+    # Please follow the OpenAPI documentation and fill in the localUserId, userOpenapiKey, and request_url correctly based on the runtime environment.
+
     localUserId = 'xxx'
     userOpenapiKey = 'xxx'
-    app_id = '3729de3c06'
-    request_url = 'https://crashsight.qq.com/uniform/openapi/getTopIssueEx'
 
-    body = {"appId": "3729de3c06", "platformId": 1, "mergeMultipleVersionsWithInaccurateResult": False, "version": "-1",
-            "type": "crash", "date": "20231208", "limit": 5, "countryList": [], "topIssueDataType": "unSystemExit"}
-    # print(request_url)
+    #The domestic and overseas addresses are different; switch according to the requirements.
+    request_url =  'https://crashsight.qq.com/uniform/openapi/getTopIssueEx'
+    #Request parameter example
+    body = {"appId":"3729de3c06","platformId":1,"mergeMultipleVersionsWithInaccurateResult":False,"version":"-1","type":"crash","date":"20230825","limit":20,"countryList":[],"topIssueDataType":"unSystemExit"}
 
-    crashsight_open_api_obj = crashsightOpenApi(localUserId, userOpenapiKey, request_url, body)
+
+    crashsight_open_api_obj = crashsightOpenApi(localUserId,  userOpenapiKey, request_url, body)
     result = crashsight_open_api_obj.do_post_request()
     print(result.content)

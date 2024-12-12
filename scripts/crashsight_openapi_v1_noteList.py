@@ -20,11 +20,11 @@ class crashsightOpenApi(object):
         self.request_url = request_url
         self.localUserId = localUserId
 
-        # 获取当前时间戳
+        # To get the current timestamp
         self.t = int(time.time())
 
     """
-        获取签名计算值的方法
+        To calculate a signature value
     """
     def __get_api_signature(self):
         key_bytes = bytes(self.userOpenapiKey, 'utf-8')
@@ -40,7 +40,7 @@ class crashsightOpenApi(object):
         return hash_str_64
 
     """
-        获取相关的接口返回数据
+        To get the API response
     """
     def do_get_request(self):
         self.request_url += ('&userSecret={}&localUserId={}&t={}'.format(self.__get_api_signature(), self.localUserId, str(self.t)))
@@ -51,21 +51,11 @@ class crashsightOpenApi(object):
 
 
 if __name__ == "__main__":
-    # 请根据OPEN_API的文档说明，以及所在的运行环境正确填写x_token, app_id, app_key以及request_url
+    # Please follow the OpenAPI documentation and fill in the localUserId, userOpenapiKey, and request_url correctly based on the runtime environment.
 
-    # OPEN_API文档样例参数样例：
-    # x_token = 'F3108EBF-2AFB-459C-87A9-DEEAB2F54882'
-    # app_id = '3729de3c06'
-    # app_key = 'd8dff3bd-4841-48aa-8503-cd949c4894ce'
-    # request_url = 'https://crashsight.qq.com/getTopIssue/appId/' + \
-    #                app_id + '/platformId/1/version/-1/date/20210810/type' + \
-    #               '/crash/limit/20/topIssueDataType/unSystemExit?fsn=4d8a5f7f-935e-4d7a-be35-d4edb2424fb5'
-    # print(request_url)
-
-    # STAGING环境参数样例：Pre-suziefu-test项目
     localUserId = 'xxx'
     userOpenapiKey = 'xxx'
-    app_id = '3729de3c06'
+    app_id = 'xxx'
     request_url = 'https://crashsight.qq.com/uniform/openapi/noteList/appId/' + \
                   app_id + '/platformId/1/issueId/FFF4396D2D997551BC883550B74541B2?crashDataType=undefined&fsn=f14decc2-817a-47f5-8bdf-ad2a85047af6'
     # print(request_url)
